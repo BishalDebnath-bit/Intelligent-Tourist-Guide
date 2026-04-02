@@ -1,0 +1,252 @@
+/* ═══════════════════════════════════════════════════════════
+   GLOBAL.CSS — ITG Intelligent Tourist Guide
+   Variables · Reset · Base · Utilities
+═══════════════════════════════════════════════════════════ */
+
+/* ── Google Fonts import ─────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap');
+
+/* ── CSS Variables ───────────────────────────────────────── */
+:root {
+  /* Colors */
+  --clr-bg:          #0e0e0e;
+  --clr-bg-2:        #161616;
+  --clr-bg-3:        #1e1e1e;
+  --clr-bg-card:     #181818;
+  --clr-border:      rgba(255,255,255,0.07);
+  --clr-border-mid:  rgba(255,255,255,0.13);
+
+  --clr-gold:        #c9a84c;
+  --clr-gold-light:  #e2c47a;
+  --clr-gold-dim:    rgba(201,168,76,0.15);
+
+  --clr-text-primary:   #f0ede8;
+  --clr-text-secondary: #9e9b95;
+  --clr-text-muted:     #5c5a56;
+  --clr-text-on-dark:   #f0ede8;
+
+  --clr-adventure: #d4763b;
+  --clr-culture:   #7b68c8;
+  --clr-food:      #c85d6e;
+  --clr-nature:    #4a9e6b;
+
+  /* Typography */
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'Jost', sans-serif;
+
+  /* Spacing */
+  --space-xs:  0.375rem;
+  --space-sm:  0.75rem;
+  --space-md:  1.25rem;
+  --space-lg:  2rem;
+  --space-xl:  3.5rem;
+  --space-2xl: 6rem;
+
+  /* Layout */
+  --container-max: 1200px;
+  --container-pad: clamp(1.25rem, 5vw, 2.5rem);
+  --navbar-h:      70px;
+
+  /* Radius */
+  --radius-sm:  6px;
+  --radius-md:  12px;
+  --radius-lg:  20px;
+  --radius-xl:  32px;
+
+  /* Transitions */
+  --ease-out:   cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in:    cubic-bezier(0.7, 0, 0.84, 0);
+  --transition: 0.35s var(--ease-out);
+
+  /* Shadows */
+  --shadow-sm:  0 2px 12px rgba(0,0,0,0.4);
+  --shadow-md:  0 8px 32px rgba(0,0,0,0.55);
+  --shadow-lg:  0 20px 60px rgba(0,0,0,0.7);
+  --glow-gold:  0 0 40px rgba(201,168,76,0.18);
+}
+
+/* ── Reset ───────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--clr-bg);
+  color: var(--clr-text-primary);
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-body);
+  border: none;
+  background: none;
+}
+
+ul, ol { list-style: none; }
+
+input, textarea, select {
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  line-height: 1.15;
+  color: var(--clr-text-primary);
+}
+
+/* ── Utility Classes ─────────────────────────────────────── */
+.container {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+}
+
+.section-label {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--clr-gold);
+  margin-bottom: var(--space-sm);
+}
+
+.section-heading {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+  color: var(--clr-text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.section-subtext {
+  font-size: 1rem;
+  color: var(--clr-text-secondary);
+  max-width: 520px;
+  line-height: 1.7;
+}
+
+/* ── Scrollbar ───────────────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--clr-bg); }
+::-webkit-scrollbar-thumb { background: var(--clr-border-mid); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: var(--clr-gold); }
+
+/* ── Selection ───────────────────────────────────────────── */
+::selection {
+  background: var(--clr-gold);
+  color: #000;
+}
+
+/* ── Focus ring ──────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--clr-gold);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* ── Animations ──────────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(201,168,76,0.2); }
+  50%       { box-shadow: 0 0 40px rgba(201,168,76,0.45); }
+}
+
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(6px); }
+}
+
+/* ── Reveal on scroll ────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* ── Gold divider ────────────────────────────────────────── */
+.gold-line {
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: var(--clr-gold);
+  margin-bottom: var(--space-md);
+}
+
+/* ── Star rating ─────────────────────────────────────────── */
+.stars {
+  display: inline-flex;
+  gap: 2px;
+  color: var(--clr-gold);
+  font-size: 0.85rem;
+}
+
+/* ── Badge ───────────────────────────────────────────────── */
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.75em;
+  border-radius: 99px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.badge--adventure { background: rgba(212,118,59,0.15);  color: var(--clr-adventure); }
+.badge--culture   { background: rgba(123,104,200,0.15); color: var(--clr-culture); }
+.badge--food      { background: rgba(200,93,110,0.15);  color: var(--clr-food); }
+.badge--nature    { background: rgba(74,158,107,0.15);  color: var(--clr-nature); }

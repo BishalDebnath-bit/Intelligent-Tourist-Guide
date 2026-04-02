@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore all tourist destinations — filter by Adventure, Culture, Food, and Nature." />
+  <title>Explore — ITG</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/explore.css" />
+</head>
+<body>
+
+<!-- ══ NAVBAR ══════════════════════════════════════════════ -->
+<header class="navbar" role="banner">
+  <div class="navbar__container">
+    <a href="index.html" class="navbar__logo" aria-label="ITG Home">
+      <span class="navbar__logo-icon" aria-hidden="true">✦</span>
+      <span class="navbar__logo-text">ITG</span>
+    </a>
+    <nav class="navbar__nav" aria-label="Main navigation">
+      <a href="explore.html" class="navbar__link">Explore</a>
+      <a href="about.html"   class="navbar__link">About</a>
+      <a href="explore.html" class="navbar__cta">Start Exploring</a>
+    </nav>
+    <button class="navbar__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span class="navbar__hamburger-line"></span>
+      <span class="navbar__hamburger-line"></span>
+      <span class="navbar__hamburger-line"></span>
+    </button>
+  </div>
+</header>
+
+<nav class="navbar__mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+  <a href="index.html"   class="navbar__mobile-link">Home</a>
+  <a href="explore.html" class="navbar__mobile-link">Explore</a>
+  <a href="about.html"   class="navbar__mobile-link">About</a>
+</nav>
+
+<!-- ══ PAGE HEADER ═════════════════════════════════════════ -->
+<section class="explore-header" aria-labelledby="explore-heading">
+  <div class="explore-header__container">
+    <span class="explore-header__eyebrow">Discover India</span>
+    <h1 class="explore-header__heading" id="explore-heading">All Destinations</h1>
+    <p class="explore-header__sub">
+      Hand-curated spots across adventure, culture, food, and nature.
+      Filter, search, and find your next journey.
+    </p>
+  </div>
+</section>
+
+<!-- ══ CONTROLS ════════════════════════════════════════════ -->
+<div class="explore-controls" role="search" aria-label="Filter and search destinations">
+  <div class="explore-controls__container">
+    <!-- Search -->
+    <div class="explore-controls__search">
+      <div class="search-input-wrap">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input type="search" class="search-input" id="exploreSearch"
+          placeholder="Search destinations…" aria-label="Search destinations" autocomplete="off" />
+      </div>
+    </div>
+
+    <!-- Category filter pills -->
+    <div class="explore-controls__filters filter-pills" role="group" aria-label="Filter by category">
+      <button class="filter-pill active" data-category="all">All</button>
+      <button class="filter-pill" data-category="adventure">Adventure</button>
+      <button class="filter-pill" data-category="culture">Culture</button>
+      <button class="filter-pill" data-category="food">Food</button>
+      <button class="filter-pill" data-category="nature">Nature</button>
+    </div>
+
+    <!-- Result count -->
+    <p class="explore-controls__count" id="resultCount" aria-live="polite">
+      <strong>13</strong> destinations found
+    </p>
+  </div>
+</div>
+
+<!-- ══ GRID ════════════════════════════════════════════════ -->
+<main class="explore-main" id="main-content">
+  <div class="explore-grid" id="exploreGrid" aria-label="Destinations grid">
+    <!-- Rendered by explore.js -->
+  </div>
+</main>
+
+<!-- ══ DESTINATION MODAL ════════════════════════════════════ -->
+<div class="modal-backdrop" id="destModal" role="dialog" aria-modal="true" aria-labelledby="modalName" tabindex="-1"
+     onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <!-- Image -->
+    <div class="modal__image-wrap">
+      <img class="modal__image" src="" alt="" />
+      <div class="modal__image-overlay" aria-hidden="true"></div>
+      <button class="modal__close" onclick="closeModal()" aria-label="Close modal">&times;</button>
+    </div>
+
+    <!-- Body -->
+    <div class="modal__body">
+      <div class="modal__header">
+        <span class="badge modal__badge"></span>
+        <h2 class="modal__name" id="modalName"></h2>
+        <div class="modal__meta"></div>
+      </div>
+
+      <p class="modal__desc"></p>
+
+      <!-- Info grid -->
+      <div class="modal__info-grid">
+        <div class="modal__info-item">
+          <p class="modal__info-label">Entry Fee</p>
+          <p class="modal__info-value modal__fee-val">—</p>
+        </div>
+        <div class="modal__info-item">
+          <p class="modal__info-label">Best Time</p>
+          <p class="modal__info-value modal__time-val">—</p>
+        </div>
+        <div class="modal__info-item">
+          <p class="modal__info-label">Location</p>
+          <p class="modal__info-value modal__loc-val">—</p>
+        </div>
+        <div class="modal__info-item">
+          <p class="modal__info-label">Category</p>
+          <p class="modal__info-value modal__cat-val">—</p>
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div>
+        <p class="modal__section-title">📍 Location Map</p>
+        <div class="modal__map-wrap"></div>
+      </div>
+
+      <!-- Nearby -->
+      <div>
+        <p class="modal__section-title">✦ Nearby Destinations</p>
+        <div class="modal__nearby"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ FOOTER ═══════════════════════════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="footer__container">
+    <div class="footer__brand">
+      <a href="index.html" class="footer__logo">
+        <span class="footer__logo-icon" aria-hidden="true">✦</span>
+        <span class="footer__logo-text">ITG</span>
+      </a>
+      <p class="footer__tagline">Intelligent Tourist Guide — discover places worth remembering.</p>
+    </div>
+    <nav class="footer__nav" aria-label="Footer navigation">
+      <div class="footer__nav-group">
+        <h4 class="footer__nav-heading">Navigate</h4>
+        <a href="index.html"   class="footer__nav-link">Home</a>
+        <a href="explore.html" class="footer__nav-link">Explore</a>
+        <a href="about.html"   class="footer__nav-link">About</a>
+      </div>
+      <div class="footer__nav-group">
+        <h4 class="footer__nav-heading">Categories</h4>
+        <a href="explore.html?category=adventure" class="footer__nav-link">Adventure</a>
+        <a href="explore.html?category=culture"   class="footer__nav-link">Culture</a>
+        <a href="explore.html?category=food"      class="footer__nav-link">Food</a>
+        <a href="explore.html?category=nature"    class="footer__nav-link">Nature</a>
+      </div>
+    </nav>
+  </div>
+  <div class="footer__bottom">
+    <div class="footer__bottom-container">
+      <p class="footer__copy">&copy; <span id="footer-year"></span> Intelligent Tourist Guide.</p>
+      <p class="footer__credit">Made with HTML, CSS &amp; JavaScript</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/explore.js"></script>
+</body>
+</html>

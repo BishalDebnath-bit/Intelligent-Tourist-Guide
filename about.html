@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About ITG — Intelligent Tourist Guide. Our mission, how it works, and the team behind it." />
+  <title>About — ITG</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/about.css" />
+</head>
+<body>
+
+<!-- ══ NAVBAR ══════════════════════════════════════════════ -->
+<header class="navbar" role="banner">
+  <div class="navbar__container">
+    <a href="index.html" class="navbar__logo" aria-label="ITG Home">
+      <span class="navbar__logo-icon" aria-hidden="true">✦</span>
+      <span class="navbar__logo-text">ITG</span>
+    </a>
+    <nav class="navbar__nav" aria-label="Main navigation">
+      <a href="explore.html" class="navbar__link">Explore</a>
+      <a href="about.html"   class="navbar__link">About</a>
+      <a href="explore.html" class="navbar__cta">Start Exploring</a>
+    </nav>
+    <button class="navbar__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span class="navbar__hamburger-line"></span>
+      <span class="navbar__hamburger-line"></span>
+      <span class="navbar__hamburger-line"></span>
+    </button>
+  </div>
+</header>
+
+<nav class="navbar__mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+  <a href="index.html"   class="navbar__mobile-link">Home</a>
+  <a href="explore.html" class="navbar__mobile-link">Explore</a>
+  <a href="about.html"   class="navbar__mobile-link">About</a>
+</nav>
+
+<!-- ══ ABOUT HERO ══════════════════════════════════════════ -->
+<section class="about-hero" aria-labelledby="about-main-heading">
+  <div class="about-hero__container">
+    <div class="about-hero__content">
+      <span class="section-label">Our Story</span>
+      <h1 class="about-hero__heading" id="about-main-heading">
+        Travel smarter.<br><em>Discover deeper.</em>
+      </h1>
+      <p class="about-hero__desc">
+        ITG — Intelligent Tourist Guide — was built as a web programming project
+        with one simple idea: every traveller deserves better information than
+        what bloated, ad-ridden platforms provide.
+      </p>
+      <p class="about-hero__desc">
+        We believe the best travel experiences come from local knowledge,
+        honest curation, and smart technology — not sponsored results.
+        ITG puts hand-picked destinations front and centre, with all the
+        detail you need and none of the noise you don't.
+      </p>
+      <a href="explore.html" class="btn btn--primary" style="margin-top:0.5rem; width:fit-content;">
+        Explore Destinations →
+      </a>
+    </div>
+
+    <div class="about-hero__image-wrap" aria-hidden="true">
+      <img
+        src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=700&q=80"
+        alt="Scenic travel landscape"
+        class="about-hero__image"
+        loading="lazy"
+      />
+    </div>
+  </div>
+</section>
+
+<!-- ══ STATS ════════════════════════════════════════════════ -->
+<section class="about-stats" aria-label="Site statistics">
+  <div class="about-stats__container">
+    <div class="about-stat reveal">
+      <span class="about-stat__num">13</span>
+      <p class="about-stat__label">Destinations</p>
+    </div>
+    <div class="about-stat reveal reveal-delay-1">
+      <span class="about-stat__num">4</span>
+      <p class="about-stat__label">Categories</p>
+    </div>
+    <div class="about-stat reveal reveal-delay-2">
+      <span class="about-stat__num">12+</span>
+      <p class="about-stat__label">States Covered</p>
+    </div>
+    <div class="about-stat reveal reveal-delay-3">
+      <span class="about-stat__num">100%</span>
+      <p class="about-stat__label">Ad-Free</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MISSION ══════════════════════════════════════════════ -->
+<section class="about-mission" aria-labelledby="mission-heading">
+  <div class="about-mission__container">
+    <div class="about-mission__header reveal">
+      <span class="section-label">Why We Exist</span>
+      <h2 class="about-mission__heading" id="mission-heading">Built on Three Principles</h2>
+      <p class="about-mission__sub">
+        Every design and content decision in ITG flows from these three core ideas.
+      </p>
+    </div>
+
+    <div class="about-mission__grid">
+      <article class="feature-card reveal reveal-delay-1">
+        <div class="feature-card__icon-wrap" aria-hidden="true">
+          <svg class="feature-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <h3 class="feature-card__title">Honest Curation</h3>
+        <p class="feature-card__desc">
+          No sponsored listings. No paid placements. Every destination on ITG is
+          included purely on the merit of its experience and visitor value.
+        </p>
+      </article>
+
+      <article class="feature-card reveal reveal-delay-2">
+        <div class="feature-card__icon-wrap" aria-hidden="true">
+          <svg class="feature-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+        </div>
+        <h3 class="feature-card__title">Depth Over Breadth</h3>
+        <p class="feature-card__desc">
+          Fewer spots with richer information beats a hundred shallow listings.
+          We go deep on every destination with maps, entry info, and seasonal advice.
+        </p>
+      </article>
+
+      <article class="feature-card reveal reveal-delay-3">
+        <div class="feature-card__icon-wrap" aria-hidden="true">
+          <svg class="feature-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+          </svg>
+        </div>
+        <h3 class="feature-card__title">Smart Discovery</h3>
+        <p class="feature-card__desc">
+          Real-time search, category filtering, and contextual nearby suggestions
+          help you find the right destination for your travel style, fast.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══ QUOTE ════════════════════════════════════════════════ -->
+<section class="about-quote" aria-label="Inspirational quote">
+  <div class="about-quote__container reveal">
+    <span class="about-quote__mark" aria-hidden="true">"</span>
+    <blockquote class="about-quote__text">
+      Not all those who wander are lost — but the ones who plan well
+      always have the best stories.
+    </blockquote>
+    <p class="about-quote__author">— The ITG Philosophy</p>
+  </div>
+</section>
+
+<!-- ══ HOW IT WORKS ═════════════════════════════════════════ -->
+<section class="about-how" aria-labelledby="how-heading">
+  <div class="about-how__container">
+    <div class="about-how__header reveal">
+      <span class="section-label">The Process</span>
+      <h2 class="about-how__heading" id="how-heading">How ITG Works</h2>
+    </div>
+
+    <div class="about-steps">
+      <div class="about-step reveal reveal-delay-1">
+        <div class="about-step__num" aria-hidden="true">01</div>
+        <div>
+          <h3 class="about-step__title">Choose a Category</h3>
+          <p class="about-step__desc">
+            Pick from Adventure, Culture, Food, or Nature — or browse all
+            destinations together on the Explore page.
+          </p>
+        </div>
+      </div>
+
+      <div class="about-step reveal reveal-delay-2">
+        <div class="about-step__num" aria-hidden="true">02</div>
+        <div>
+          <h3 class="about-step__title">Filter &amp; Search</h3>
+          <p class="about-step__desc">
+            Use the real-time search and filter pills to narrow down destinations
+            by name, location, or type in seconds.
+          </p>
+        </div>
+      </div>
+
+      <div class="about-step reveal reveal-delay-3">
+        <div class="about-step__num" aria-hidden="true">03</div>
+        <div>
+          <h3 class="about-step__title">Explore the Detail</h3>
+          <p class="about-step__desc">
+            Click any card to open a full detail view — with map, entry fee,
+            best time to visit, and nearby spots to plan your full trip.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA STRIP ════════════════════════════════════════════ -->
+<section aria-label="Call to action" style="padding: var(--space-2xl) 0; background: var(--clr-bg-2); border-top: 1px solid var(--clr-border); text-align: center;">
+  <div style="max-width: var(--container-max); margin-inline: auto; padding-inline: var(--container-pad);">
+    <span class="section-label">Ready?</span>
+    <h2 class="section-heading" style="margin-bottom: var(--space-md);">Start Your Next Journey</h2>
+    <p style="color: var(--clr-text-secondary); margin-bottom: var(--space-lg); max-width: 440px; margin-inline: auto;">
+      13 hand-curated destinations across India — filtered, searchable, and mapped.
+    </p>
+    <a href="explore.html" class="btn btn--primary">
+      Explore All Destinations →
+    </a>
+  </div>
+</section>
+
+<!-- ══ FOOTER ═══════════════════════════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="footer__container">
+    <div class="footer__brand">
+      <a href="index.html" class="footer__logo">
+        <span class="footer__logo-icon" aria-hidden="true">✦</span>
+        <span class="footer__logo-text">ITG</span>
+      </a>
+      <p class="footer__tagline">Intelligent Tourist Guide — discover places worth remembering.</p>
+    </div>
+    <nav class="footer__nav" aria-label="Footer navigation">
+      <div class="footer__nav-group">
+        <h4 class="footer__nav-heading">Navigate</h4>
+        <a href="index.html"   class="footer__nav-link">Home</a>
+        <a href="explore.html" class="footer__nav-link">Explore</a>
+        <a href="about.html"   class="footer__nav-link">About</a>
+      </div>
+      <div class="footer__nav-group">
+        <h4 class="footer__nav-heading">Categories</h4>
+        <a href="explore.html?category=adventure" class="footer__nav-link">Adventure</a>
+        <a href="explore.html?category=culture"   class="footer__nav-link">Culture</a>
+        <a href="explore.html?category=food"      class="footer__nav-link">Food</a>
+        <a href="explore.html?category=nature"    class="footer__nav-link">Nature</a>
+      </div>
+    </nav>
+  </div>
+  <div class="footer__bottom">
+    <div class="footer__bottom-container">
+      <p class="footer__copy">&copy; <span id="footer-year"></span> Intelligent Tourist Guide.</p>
+      <p class="footer__credit">Made with HTML, CSS &amp; JavaScript</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

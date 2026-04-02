@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Intelligent Tourist Guide — discover curated destinations, hidden gems, and local travel stories across India." />
+  <title>ITG — Intelligent Tourist Guide</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/home.css" />
+</head>
+<body>
+
+<!-- ══ NAVBAR ══════════════════════════════════════════════ -->
+<header class="navbar" role="banner">
+  <div class="navbar__container">
+    <a href="index.html" class="navbar__logo" aria-label="ITG Home">
+      <span class="navbar__logo-icon" aria-hidden="true">✦</span>
+      <span class="navbar__logo-text">ITG</span>
+    </a>
+    <nav class="navbar__nav" aria-label="Main navigation">
+      <a href="explore.html" class="navbar__link">Explore</a>
+      <a href="about.html"   class="navbar__link">About</a>
+      <a href="explore.html" class="navbar__cta">Start Exploring</a>
+    </nav>
+    <button class="navbar__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span class="navbar__hamburger-line"></span>
+      <span class="navbar__hamburger-line"></span>
+      <span class="navbar__hamburger-line"></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile menu -->
+<nav class="navbar__mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+  <a href="index.html"   class="navbar__mobile-link">Home</a>
+  <a href="explore.html" class="navbar__mobile-link">Explore</a>
+  <a href="about.html"   class="navbar__mobile-link">About</a>
+</nav>
+
+<!-- ══ HERO ════════════════════════════════════════════════ -->
+<section class="hero" aria-label="Hero section">
+  <div class="hero__bg-image" role="img" aria-label="Scenic travel background"></div>
+  <div class="hero__overlay" aria-hidden="true"></div>
+
+  <div class="hero__content">
+    <p class="hero__eyebrow">Your world. Your journey.</p>
+    <h1 class="hero__heading">
+      Discover Places<br><em>Worth Remembering</em>
+    </h1>
+    <p class="hero__tagline">
+      Curated travel guides, hidden gems, and local stories —
+      all in one intelligent explorer.
+    </p>
+
+    <form class="hero__search" id="heroSearchForm" role="search" aria-label="Search destinations">
+      <div class="hero__search-wrapper">
+        <span class="hero__search-icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </span>
+        <input type="search" class="hero__search-input" id="heroSearch"
+          placeholder="Search destinations, categories…"
+          aria-label="Search destinations" autocomplete="off" />
+      </div>
+      <button type="submit" class="hero__search-btn">Search</button>
+    </form>
+
+    <a href="explore.html" class="hero__explore-btn">
+      Explore all destinations
+      <span class="hero__explore-btn-arrow" aria-hidden="true">→</span>
+    </a>
+  </div>
+
+  <div class="hero__scroll-hint" aria-hidden="true">
+    <span class="hero__scroll-line"></span>
+    <span class="hero__scroll-label">Scroll</span>
+  </div>
+
+  <!-- Stats strip -->
+  <div class="hero__stats" aria-label="Site statistics">
+    <div class="hero__stat">
+      <span class="hero__stat-num" data-target="13" data-suffix="">13</span>
+      <span class="hero__stat-label">Destinations</span>
+    </div>
+    <div class="hero__stat">
+      <span class="hero__stat-num" data-target="4" data-suffix="">4</span>
+      <span class="hero__stat-label">Categories</span>
+    </div>
+    <div class="hero__stat">
+      <span class="hero__stat-num" data-target="12" data-suffix="+">12+</span>
+      <span class="hero__stat-label">States Covered</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ABOUT STRIP ══════════════════════════════════════════ -->
+<section class="about-strip" id="about-strip" aria-labelledby="about-heading">
+  <div class="about-strip__container">
+    <div class="about-strip__header reveal">
+      <span class="section-label">What We Do</span>
+      <h2 class="about-strip__heading" id="about-heading">Your Intelligent Travel Companion</h2>
+      <p class="about-strip__subtext">
+        No ads, no noise — just smart, hand-curated destination intelligence
+        built to help you travel better.
+      </p>
+    </div>
+
+    <div class="about-strip__cards">
+      <article class="feature-card reveal reveal-delay-1">
+        <div class="feature-card__icon-wrap" aria-hidden="true">
+          <svg class="feature-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+        <h3 class="feature-card__title">Curated Destinations</h3>
+        <p class="feature-card__desc">
+          Every spot on ITG is hand-picked and reviewed — from iconic landmarks
+          to off-the-beaten-path local gems you won't find on tourist brochures.
+        </p>
+      </article>
+
+      <article class="feature-card reveal reveal-delay-2">
+        <div class="feature-card__icon-wrap" aria-hidden="true">
+          <svg class="feature-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+        </div>
+        <h3 class="feature-card__title">Smart Filtering</h3>
+        <p class="feature-card__desc">
+          Filter by category, rating, entry fee, and best season. Find exactly
+          what matches your travel style in seconds.
+        </p>
+      </article>
+
+      <article class="feature-card reveal reveal-delay-3">
+        <div class="feature-card__icon-wrap" aria-hidden="true">
+          <svg class="feature-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+            <line x1="3" y1="9" x2="21" y2="9"/>
+            <line x1="9" y1="21" x2="9" y2="9"/>
+          </svg>
+        </div>
+        <h3 class="feature-card__title">Maps &amp; Details</h3>
+        <p class="feature-card__desc">
+          Every destination includes an embedded live map, entry info, best
+          time to visit, and nearby spots — everything before you go.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══ POPULAR CATEGORIES ═══════════════════════════════════ -->
+<section class="categories" id="categories" aria-labelledby="cat-heading">
+  <div class="categories__container">
+    <div class="categories__header reveal">
+      <span class="section-label">Browse By Type</span>
+      <h2 class="categories__heading" id="cat-heading">Popular Categories</h2>
+      <p class="categories__subtext">
+        Find your vibe — whether you're chasing adrenaline, culture,
+        great food, or quiet nature.
+      </p>
+    </div>
+
+    <div class="categories__grid">
+      <a href="explore.html?category=adventure" class="category-card category-card--adventure reveal reveal-delay-1">
+        <div class="category-card__image-wrap">
+          <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=75" alt="Adventure — hiking mountains" class="category-card__image" loading="lazy" />
+          <div class="category-card__overlay" aria-hidden="true"></div>
+        </div>
+        <div class="category-card__body">
+          <span class="category-card__tag">Outdoor &amp; Thrills</span>
+          <h3 class="category-card__title">Adventure</h3>
+          <p class="category-card__count" id="count-adventure">— spots</p>
+        </div>
+        <span class="category-card__arrow" aria-hidden="true">↗</span>
+      </a>
+
+      <a href="explore.html?category=culture" class="category-card category-card--culture reveal reveal-delay-2">
+        <div class="category-card__image-wrap">
+          <img src="https://images.unsplash.com/photo-1601921004897-b7d582836990?w=600&q=75" alt="Culture — ancient temples and ruins" class="category-card__image" loading="lazy" />
+          <div class="category-card__overlay" aria-hidden="true"></div>
+        </div>
+        <div class="category-card__body">
+          <span class="category-card__tag">Heritage &amp; Art</span>
+          <h3 class="category-card__title">Culture</h3>
+          <p class="category-card__count" id="count-culture">— spots</p>
+        </div>
+        <span class="category-card__arrow" aria-hidden="true">↗</span>
+      </a>
+
+      <a href="explore.html?category=food" class="category-card category-card--food reveal reveal-delay-3">
+        <div class="category-card__image-wrap">
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=75" alt="Food — local cuisine and street food" class="category-card__image" loading="lazy" />
+          <div class="category-card__overlay" aria-hidden="true"></div>
+        </div>
+        <div class="category-card__body">
+          <span class="category-card__tag">Local Cuisine</span>
+          <h3 class="category-card__title">Food</h3>
+          <p class="category-card__count" id="count-food">— spots</p>
+        </div>
+        <span class="category-card__arrow" aria-hidden="true">↗</span>
+      </a>
+
+      <a href="explore.html?category=nature" class="category-card category-card--nature reveal reveal-delay-4">
+        <div class="category-card__image-wrap">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=75" alt="Nature — forests and mountains" class="category-card__image" loading="lazy" />
+          <div class="category-card__overlay" aria-hidden="true"></div>
+        </div>
+        <div class="category-card__body">
+          <span class="category-card__tag">Parks &amp; Wildlife</span>
+          <h3 class="category-card__title">Nature</h3>
+          <p class="category-card__count" id="count-nature">— spots</p>
+        </div>
+        <span class="category-card__arrow" aria-hidden="true">↗</span>
+      </a>
+    </div>
+
+    <div class="categories__footer reveal">
+      <a href="explore.html" class="categories__see-all">
+        View all destinations <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ═══════════════════════════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="footer__container">
+    <div class="footer__brand">
+      <a href="index.html" class="footer__logo" aria-label="ITG Home">
+        <span class="footer__logo-icon" aria-hidden="true">✦</span>
+        <span class="footer__logo-text">ITG</span>
+      </a>
+      <p class="footer__tagline">
+        Intelligent Tourist Guide — discover places worth remembering.
+        Built for BCSE301P Web Programming.
+      </p>
+    </div>
+    <nav class="footer__nav" aria-label="Footer navigation">
+      <div class="footer__nav-group">
+        <h4 class="footer__nav-heading">Navigate</h4>
+        <a href="index.html"   class="footer__nav-link">Home</a>
+        <a href="explore.html" class="footer__nav-link">Explore</a>
+        <a href="about.html"   class="footer__nav-link">About</a>
+      </div>
+      <div class="footer__nav-group">
+        <h4 class="footer__nav-heading">Categories</h4>
+        <a href="explore.html?category=adventure" class="footer__nav-link">Adventure</a>
+        <a href="explore.html?category=culture"   class="footer__nav-link">Culture</a>
+        <a href="explore.html?category=food"      class="footer__nav-link">Food</a>
+        <a href="explore.html?category=nature"    class="footer__nav-link">Nature</a>
+      </div>
+    </nav>
+  </div>
+  <div class="footer__bottom">
+    <div class="footer__bottom-container">
+      <p class="footer__copy">&copy; <span id="footer-year"></span> Intelligent Tourist Guide.</p>
+      <p class="footer__credit">Made with HTML, CSS &amp; JavaScript</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>

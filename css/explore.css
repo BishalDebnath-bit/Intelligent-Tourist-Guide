@@ -1,0 +1,134 @@
+/* ═══════════════════════════════════════════════════════════
+   EXPLORE.CSS — ITG
+   Explore page: header, filters, grid
+═══════════════════════════════════════════════════════════ */
+
+/* ══ PAGE HEADER ════════════════════════════════════════════ */
+.explore-header {
+  padding-top: calc(var(--navbar-h) + var(--space-xl));
+  padding-bottom: var(--space-xl);
+  background: var(--clr-bg-2);
+  border-bottom: 1px solid var(--clr-border);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative corner accent */
+.explore-header::before {
+  content: 'EXPLORE';
+  position: absolute;
+  top: 50%;
+  right: -2rem;
+  transform: translateY(-50%);
+  font-family: var(--font-display);
+  font-size: 12rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.02);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.explore-header__container {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+}
+
+.explore-header__eyebrow {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--clr-gold);
+  margin-bottom: var(--space-sm);
+}
+
+.explore-header__heading {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: var(--clr-text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.explore-header__sub {
+  font-size: 1rem;
+  color: var(--clr-text-secondary);
+  max-width: 500px;
+  line-height: 1.7;
+}
+
+/* ══ CONTROLS BAR ═══════════════════════════════════════════ */
+.explore-controls {
+  background: var(--clr-bg);
+  border-bottom: 1px solid var(--clr-border);
+  position: sticky;
+  top: var(--navbar-h);
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  background: rgba(14,14,14,0.9);
+}
+
+.explore-controls__container {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding: var(--space-md) var(--container-pad);
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.explore-controls__search {
+  flex: 1;
+  min-width: 200px;
+  max-width: 320px;
+}
+
+.explore-controls__filters {
+  flex: 1;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.explore-controls__count {
+  font-size: 0.8rem;
+  color: var(--clr-text-muted);
+  white-space: nowrap;
+  margin-left: auto;
+}
+
+.explore-controls__count strong {
+  color: var(--clr-gold);
+  font-weight: 600;
+}
+
+/* ══ GRID ═══════════════════════════════════════════════════ */
+.explore-main {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding: var(--space-xl) var(--container-pad);
+  min-height: 60vh;
+}
+
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-md);
+}
+
+/* ══ RESPONSIVE — EXPLORE ═══════════════════════════════════ */
+@media (max-width: 768px) {
+  .explore-controls__container { flex-direction: column; align-items: stretch; }
+  .explore-controls__search { max-width: 100%; }
+  .explore-controls__count { margin-left: 0; }
+  .explore-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .explore-grid { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+}
