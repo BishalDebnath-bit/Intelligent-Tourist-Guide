@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════════════════════
    DATA.JS — ITG Intelligent Tourist Guide
-   All destination data. Loaded first before other scripts.
+   All destination data. Loaded first before other scripts.ok
 ═══════════════════════════════════════════════════════════ */
 
 const destinations = [
